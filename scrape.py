@@ -37,7 +37,7 @@ def runScraper(url, filename):
     print(response)
     soup = BeautifulSoup(response.text, "html.parser")
     links = soup.findAll(href=re.compile("song-"))
-    print("Parsed " + len(links) + " links.")
+    print("Parsed " + str(len(links)) + " links.")
     createLyricsFile(links, filename)
 
 if __name__ == "__main__":
